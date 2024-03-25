@@ -2,7 +2,8 @@ package com.workintech.ecommerce.service;
 
 import com.workintech.ecommerce.dto.CategoriesResponseDto;
 import com.workintech.ecommerce.entity.Categories;
-import com.workintech.ecommerce.exception.CategoriesException;
+
+import com.workintech.ecommerce.exception.ClassesException;
 import com.workintech.ecommerce.repository.CategoriesRepository;
 import com.workintech.ecommerce.util.CategoryDtoConvertion;
 import lombok.AllArgsConstructor;
@@ -60,7 +61,7 @@ public class CategoriesServiceImpl implements CategoriesService {
             return CategoryDtoConvertion.convertCategory(categories);
         }
         //TODO burada error hangling yap.İlgili id de category olmadığına dair mesaj dön
-        throw new CategoriesException("Category with given id is not exist: " + id, HttpStatus.NOT_FOUND);
+        throw new ClassesException("Category with given id is not exist: " + id, HttpStatus.NOT_FOUND);
 
     }
 }

@@ -2,7 +2,8 @@ package com.workintech.ecommerce.service;
 
 import com.workintech.ecommerce.dto.ProductResponseDto;
 import com.workintech.ecommerce.entity.Product;
-import com.workintech.ecommerce.exception.ProductException;
+
+import com.workintech.ecommerce.exception.ClassesException;
 import com.workintech.ecommerce.repository.ProductRepository;
 import com.workintech.ecommerce.util.ProductDtoConvertion;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,7 +50,7 @@ public class ProductServiceImpl implements ProductService{
             Product product = productOptional.get();
             return ProductDtoConvertion.convertProduct(product);
         }
-        throw new ProductException("Product with given id is not exist: " + id, HttpStatus.NOT_FOUND);
+        throw new ClassesException("Product with given id is not exist: " + id, HttpStatus.NOT_FOUND);
     }
 
 

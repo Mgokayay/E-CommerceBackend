@@ -1,7 +1,9 @@
 package com.workintech.ecommerce.util;
 
 import com.workintech.ecommerce.dto.ProductResponseDto;
+import com.workintech.ecommerce.dto.StoreResponseDto;
 import com.workintech.ecommerce.entity.Product;
+import com.workintech.ecommerce.entity.Store;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,4 +25,6 @@ public class ProductDtoConvertion {
                 product.getStock(),product.getImages(),
                 product.getRating(),product.getStoreId(),product.getSellCount());
     }
+
+
 }
