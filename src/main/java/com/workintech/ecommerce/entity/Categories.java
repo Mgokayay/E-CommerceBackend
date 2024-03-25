@@ -38,7 +38,14 @@ public class Categories {
     @OneToMany(mappedBy = "categories",cascade = {CascadeType.ALL})
     private List<Product> products;
 
-    //TODO null pointer checki yap!!
+
+    public void addProduct (Product product){
+        if(products == null){
+            products=new ArrayList<>();
+        }
+        products.add(product);
+    }
+    // null pointer checki !!
 
 
 
