@@ -16,14 +16,14 @@ public class ProductDtoConvertion {
                 productResponses.add(new ProductResponseDto(product.getId(),product.getName(),
                         product.getDescription(),product.getPrice(),
                         product.getStock(),product.getImages(),
-                        product.getRating(),product.getStoreId(),product.getSellCount())));
+                        product.getRating(),product.getStore(),product.getSellCount())));
                         return productResponses;
     }
     public static ProductResponseDto convertProduct(Product product){
         return new ProductResponseDto(product.getId(),product.getName(),
                 product.getDescription(),product.getPrice(),
                 product.getStock(),product.getImages(),
-                product.getRating(),product.getStoreId(),product.getSellCount());
+                product.getRating(),product.getStore(),product.getSellCount());
     }
 
 

@@ -35,8 +35,8 @@ public class Product {
     @Column(name = "rating")
     private double rating;
 
-    @Column(name = "store_id")
-    private long storeId;
+//    @Column(name = "store_id")
+//    private long storeId;
 
     @Column(name = "sell_count")
     private long sellCount;
