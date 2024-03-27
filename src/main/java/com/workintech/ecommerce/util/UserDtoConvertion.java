@@ -13,12 +13,12 @@ public class UserDtoConvertion {
         List<UserResponseDto> userResponses=new ArrayList<>();
         users.stream().forEach(user ->
                 userResponses.add(new UserResponseDto(user.getId()
-                ,user.getName(), user.getEmail(), user.getPassword(),user.getRoleId())));
+                ,user.getName(), user.getEmail(), user.getPassword(),user.getRole().getId())));
         return userResponses;
     }
 
     public static UserResponseDto convertUser(User user){
         return new UserResponseDto(user.getId(), user.getName(),
-                user.getEmail(), user.getPassword(), user.getRoleId() );
+                user.getEmail(), user.getPassword(), user.getRole().getId() );
     }
 }

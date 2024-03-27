@@ -25,8 +25,8 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "role_id")
-    private long roleId;
+//    @Column(name = "role_id")
+//    private long roleId;
 
 //    @Column(name = "store_id")
 //    private long storeId;
@@ -34,4 +34,8 @@ public class User {
     @ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.PERSIST})
     @JoinColumn(name = "store_id")
     Store store;
+
+    @ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH,CascadeType.PERSIST})
+    @JoinColumn(name = "role_id")
+    Role role;
 }
